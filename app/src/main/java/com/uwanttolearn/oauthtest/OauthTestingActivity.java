@@ -35,28 +35,28 @@ public class OauthTestingActivity extends Activity {
 
         String loginUrl = "https://www.linkedin.com/uas/oauth2/authorization?" +
                         "response_type=code&" +
-                        "client_id=78lwdspv8bcr46&" +
-                        "state=avvsggd&" +
-                        "redirect_uri=http://www.uwanttolearn.com/&" +
+                        "client_id= INSERT HERE &" +
+                        "state=test&" +
+                        "redirect_uri=INSERT HERE &" +
                         "scope=";
 //        String loginUrl = "https://www.facebook.com/dialog/oauth?" +
-//                "client_id=794159763977710&" +
-//                "redirect_uri=https://www.uwanttolearn.com/&" +
+//                "client_id=INSERT HERE &" +
+//                "redirect_uri=INSERT HERE &" +
 //                "scope=email,publish_actions";
         intent.putExtra(EasySocialAuthActivity.URL, loginUrl);
 
-        intent.putExtra(EasySocialAuthActivity.REDIRECT_URL,  "http://www.uwanttolearn.com/");
+        intent.putExtra(EasySocialAuthActivity.REDIRECT_URL,  "INSERT HERE");
 
         String accessTokenUrl = "https://www.linkedin.com/uas/oauth2/accessToken?" +
                 "grant_type=authorization_code&" +
-                "redirect_uri=http://www.uwanttolearn.com/&" +
-                "client_id=78lwdspv8bcr46&" +
-                "client_secret=NKdbrMz9cXIrm9pU&" +
+                "redirect_uri=INSERT HERE &" +
+                "client_id=INSERT HERE &" +
+                "client_secret=INSERT HERE &" +
                 "code=";
 //        String accessTokenUrl = "https://graph.facebook.com/oauth/access_token?" +
-//                "client_id=794159763977710&" +
-//                "redirect_uri=https://www.uwanttolearn.com/&" +
-//                "client_secret=f558c2bf4d6e745186a91291dd386e80&" +
+//                "client_id=INSERT HERE &" +
+//                "redirect_uri=INSERT HERE &" +
+//                "client_secret=INSERT HERE &" +
 //                "code=";
         intent.putExtra(EasySocialAuthActivity.ACCESS_TOKEN, accessTokenUrl);
         startActivityForResult(intent, REQUEST_CODE);
